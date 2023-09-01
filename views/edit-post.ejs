@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit post</title>
+
+</head>
+
+<body>
+    <%- include('/home/aazizsigar/challangenodejs/shared/head.ejs') %>
+        <%- include('/home/aazizsigar/challangenodejs/shared/header.ejs') %>
+            <div>
+                <form action="/submit-edit/<%= info._id %>" method="post">
+                    <label for="title">Title::</label>
+                    <input id="title" type="text" name="title" placeholder="title" value="<%= info.title %>">
+                    <br><br><br><br>
+                    <label for="desc">description:</label>
+                    <input id="desc" type="text" name="desc" placeholder="desc" value="<%= info.desc %>">
+                    <br><br><br><br>
+
+                    <button>update</button>
+                </form>
+                <% if(err) { %>
+                    <h6><%= err%></h6><% } %>
+            </div>
+            <!-- <form action="">
+        <input type="text" name="title" placeholder="title"  value="<%= info.title %>">
+    </form> -->
+
+</body>
+
+</html>

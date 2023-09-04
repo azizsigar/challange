@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Post</title>
+</head>
+<body>
+  <h1>Full Post</h1>
+  <div>
+    <%- include('/home/aazizsigar/challangenodejs/challange/shared/header.ejs') %>
+<h2><%= post.title %></h2>
+<h2><%= post.desc %></h2>
+<h2><%= post.comments %></h2>
+<h2><%= post.created_at%></h2>
+<button>
+
+  <a href="/edit-post/<%= post._id%>" > 🖊️ </a>
+</button>
+<button>
+
+  <a href="/delete-post/<%= post._id%>" > delete post </a>
+</button>
+
+
+   
+     </div>
+</body>
+</html>
